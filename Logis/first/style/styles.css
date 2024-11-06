@@ -1,0 +1,239 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --fondo:#000;
+    --texto:#000;
+    --loginContent:#fff;
+    --box:#2595e7;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color:var(--fondo);
+    color: var(--texto);
+}
+
+.Login_section_1{
+    max-width: 270px;
+    min-width: 200px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: var(--loginContent);
+    box-shadow:var(--box) -5px 5px 20px 5px;
+}
+
+.Login_content{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
+}
+
+.login_img_profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_img_profile > img{
+    text-align: center;
+    object-fit: cover;
+    width:100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Login_content > input[type='text'],
+.Login_content > input[type='password']{
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: solid 1px;
+    background-color: #cef;
+}
+
+.Login_content > input[type='text'],
+.Login_content > input[type='password']:focus{
+    outline: none;
+}
+
+.Login_content > input[type='checkbox']{
+    margin-right: auto;
+}
+
+.Login_content a{
+    margin-left: auto;
+}
+
+.Login_content > p,a{
+    font-size: 12px;
+}
+
+.login_btn{
+    border: 1px solid var(--box);
+    border-radius: 15px;
+    width: 80%;
+    padding: 5px;
+    color: var(--box);
+    background-color: var(--fondo);
+}
+
+.login_btn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid var(--box);
+}
+
+.login_title{
+    font-size: 30px;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+}
+
+/* estilos de reset*/
+
+.reset_section_1{
+    max-width: 270px;
+    min-height: 200px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: var(--loginContent);
+    box-shadow:var(--box) -5px 5px 20px 5px;
+}
+
+.reset_section_1 > p{
+    font-size: 30px;
+    text-align: center;
+}
+
+.reset_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.reset_content > input{
+    border: none;
+    width: 90%;
+    height: 50px;
+    border-bottom: 1px solid var(--fondo);
+    border-radius: 5px;
+    background-color: #cef;
+    padding: 5px;
+}
+
+
+.reset_mail{
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    width: 90%;
+    height: 50px;
+    border-bottom: 1px solid var(--fondo);
+    border-radius: 5px;
+    background-color: #cef;
+    padding: 5px;
+}
+
+.reset_mail label{
+    display: block;
+}
+
+.reset_mail input{
+    font-size: 17px;
+    border: none;
+    background-color: #cef;
+    width: 100%;
+    outline: none;
+    overflow: hidden;
+}
+
+.reset_mail:hover{
+    cursor: inherit;
+    border: 1px solid var(--fondo);
+}
+
+.reset_content > input[type='submit']{
+    background-color: var(--fondo);
+    color: var(--box);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.reset_content > input[type='submit']:hover{
+    background-color: var(--loginContent);
+    border: 1px solid var(--box);
+}
+
+/*style for newUser*/
+.newUser_section_1{
+    max-width: 300px;
+    min-width: 200px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: var(--loginContent);
+    box-shadow:var(--box) -5px 5px 20px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.newUser_title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+.users_datos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.users_datos > input{
+    display: block;
+    margin-left: 7px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--fondo);
+    border-radius: 5px;
+    background-color: #cef;
+    padding: 5px;
+}
+
+.newUser_btn{
+    width: 80%;
+    height: 30px;
+    border: 1px solid var(--fondo);
+    border-radius: 5px;
+    background-color: var(--fondo);
+    color: var(--box);
+    margin-bottom: 12px;
+}
+
+.newUser_btn:hover{
+    border: 1px solid var(--box);
+    background-color: var(--loginContent);
+}
