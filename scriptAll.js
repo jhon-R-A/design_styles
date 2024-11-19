@@ -32,9 +32,9 @@ const crearCard = (opc)=>{
 
 //funcion para administar los disenos de login
 const crearCardLogin = ()=>{
-    const listasImagenes = ["login_1.png"]//lista de las imganes
-    const listasTexto = ["login uno"]//listas del texto descriptivo
-    const listaPaginas = ["first"]//lista de las paginas (nombres de carpetas)
+    const listasImagenes = ["login_1.png","login_2.png"]//lista de las imganes
+    const listasTexto = ["login uno","login dos"]//listas del texto descriptivo
+    const listaPaginas = ["first","two"]//lista de las paginas (nombres de carpetas)
 
     const rutaImg = "./imgAll/";//ruta de las imagenes principales
     const rutaPaginas = "./Logis/"//ruta de las paginas 
@@ -53,7 +53,7 @@ const crearCardLogin = ()=>{
         img.src = rutaImg+listasImagenes[i];
         const texto = document.createTextNode(listasTexto[i])
         p.appendChild(texto);
-        a.href = rutaPaginas+listaPaginas+"/index.html";
+        a.href = rutaPaginas+listaPaginas[i]+"/index.html";
         a.target = "_blank";
         a.appendChild(textoBtn);
         card.appendChild(img);
