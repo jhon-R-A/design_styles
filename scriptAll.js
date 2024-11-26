@@ -13,43 +13,68 @@ opciones.addEventListener('click',(e)=>{
         container.removeChild(container.firstChild);
     }
     //creo el fragmeento
-    let res = crearCard(opc)
+    let res = selecionarCard(opc)
     //agrego el fargmento al contenedor
     container.appendChild(res);
 });
 
-const crearCard = (opc)=>{
+//funcion para invocar la creacion de la card, en fusion a la opcion
+const selecionarCard = (opc)=>{
+    /* agregar al array respetido de cada diseño los datos para crear las cards*/
     let respuesta;
 
     if(opc == "login"){
-        respuesta = crearCardLogin();
+
+        const listasImagenes = [
+            "login_1.png",
+            "login_2.png",
+            "login-an.png"
+        ]//lista de las imganes
+        
+        const listasTexto = [
+            "login uno",
+            "login dos",
+            "login tres"
+        ]//listas del texto descriptivo
+        
+        const listaPaginas = [
+            "first",
+            "two",
+            "login_An"
+        ]//lista de las paginas (nombres de carpetas)
+        
+        const rutaImg = "./imgAll/";//ruta de las imagenes principales
+        const rutaPaginas = "./Logis/"//ruta de las paginas 
+
+        respuesta = crearCard(listasImagenes,listasTexto,listaPaginas,rutaImg,rutaPaginas);
+
     }else if(opc == "nabvar"){
-        crearCardNabvar()
+
+        const listasImagenes = [
+            "nabvar_1.png"
+        ]//lista de las imganes
+        const listasTexto = [
+            "nabvar uno"
+        ]//listas del texto descriptivo
+        const listaPaginas = [
+            "first"
+        ]//lista de las paginas (nombres de carpetas)
+        
+        const rutaImg = "./imgAll/";//ruta de las imagenes principales
+        const rutaPaginas = "./Nabvar/"//ruta de las paginas 
+        respuesta = crearCard(listasImagenes,listasTexto,listaPaginas,rutaImg,rutaPaginas);
+
+    }else if(opc == "sidebar"){
+        respuesta = crearCard();
+    }else if(opc == "footer"){
+        respuesta = crearCard();
     }
 
     return respuesta;
 }
 
 //funcion para administar los disenos de login
-const crearCardLogin = ()=>{
-    const listasImagenes = [
-        "login_1.png",
-        "login_2.png",
-        "login-an.png"
-    ]//lista de las imganes
-    const listasTexto = [
-        "login uno",
-        "login dos",
-        "login tres"
-    ]//listas del texto descriptivo
-    const listaPaginas = [
-        "first",
-        "two",
-        "login_An"
-    ]//lista de las paginas (nombres de carpetas)
-
-    const rutaImg = "./imgAll/";//ruta de las imagenes principales
-    const rutaPaginas = "./Logis/"//ruta de las paginas 
+const crearCard = (listasImagenes,listasTexto,listaPaginas,rutaImg,rutaPaginas)=>{
 
     for(let i=0; i < listaPaginas.length;i++){
         
@@ -75,7 +100,4 @@ const crearCardLogin = ()=>{
     }
 
     return fragmen;
-}
-
-const crearCardNabvar = ()=>{
 }
